@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Course } from '../model/course';
 
 @Component({
   selector: 'course-card',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseCardComponent implements OnInit {
 
+  @Input()
+  course:Course;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onCourseViewed(){
+
+    console.log("card componet - button clicked..");
+   
   }
 
 }
